@@ -8,12 +8,20 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class PdfController extends Controller
 {
-    public function pdf(){
 
-     $users =  User::all();
-     $pdf = Pdf::loadView('pdf', compact('users'));
-
-     return $pdf->stream();
-        //return view('pdf');
+    public function users(){
+        $users = User::all();
+        return view('users', compact('users'));
     }
+
+
+    public function pdf(User $user){
+        //$user = User::find($id);
+        $pdf = Pdf::loadView('pdf', compact('user'));
+        return $pdf->stream();
+
+
+    }
+
+
 }

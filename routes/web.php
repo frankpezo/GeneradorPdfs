@@ -8,4 +8,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/pdf', [PdfController::class, 'pdf'])->name('pdf');
+Route::get('/users', [PdfController::class, 'users'])->name('users');
+Route::get('/pdf/{user}', [PdfController::class, 'pdf'])->name('pdf');
