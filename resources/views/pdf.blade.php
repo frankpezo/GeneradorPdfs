@@ -1,4 +1,3 @@
-$
 <!doctype html>
 <html lang="en">
 
@@ -68,7 +67,7 @@ $
     <div class="certificate">
         <h1>Certificado de Reconocimiento</h1>
         <p>Este certificado se otorga a</p>
-        <h2>[Nombre del Recipiente]</h2>
+        <h2>[{{ $user->name }}]</h2>
         <p>En reconocimiento a su sobresaliente desempeño y dedicación.</p>
         <p>Otorgado el [Fecha]</p>
         <div class="signature">
