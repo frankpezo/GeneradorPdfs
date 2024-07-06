@@ -69,7 +69,7 @@
         <p>Este certificado se otorga a</p>
         <h2>[{{ $user->name }}]</h2>
         <p>En reconocimiento a su sobresaliente desempeño y dedicación.</p>
-        <p>Otorgado el [Fecha]</p>
+        <p>Otorgado el [{{ $date }}]</p>
         <div class="signature">
             <div>
                 <p>_______________________</p>

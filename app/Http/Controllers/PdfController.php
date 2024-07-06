@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon; // Para la fecha
 
 class PdfController extends Controller
 {
@@ -16,8 +17,8 @@ class PdfController extends Controller
 
 
     public function pdf(User $user){
-        //$user = User::find($id);
-        $pdf = Pdf::loadView('pdf', compact('user'));
+        $date = Carbon::now()->format('d-m-Y'); //Fecha actual
+        $pdf = Pdf::loadView('pdf', compact('user', 'date'));
         return $pdf->stream();
 
 
