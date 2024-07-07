@@ -65,11 +65,12 @@
 
 <body>
     <div class="certificate">
-        <h1>Certificado de Reconocimiento</h1>
+        <img src="{{ asset('assets/img/1.png') }}" alt="Logo Institución" style="max-width: 100px; margin-top: 10px;">
+        <h1>Certificado de Título de Docente</h1>
         <p>Este certificado se otorga a</p>
-        <h2>[{{ $user->name }}]</h2>
-        <p>En reconocimiento a su sobresaliente desempeño y dedicación.</p>
-        <p>Otorgado el [Fecha]</p>
+        <h2>{{ $user->name }}</h2>
+        <p>En reconocimiento a su sobresaliente desempeño y dedicación en el campo de la educación.</p>
+        <p>Otorgado el {{ $date }}</p>
         <div class="signature">
             <div>
                 <p>_______________________</p>
@@ -80,6 +81,7 @@
                 <p>Firma del Instructor</p>
             </div>
         </div>
+        <p>Iquitos, {{ $dia }} de {{ $mes }} del {{ $anio }}</p>
     </div>
 
 
